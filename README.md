@@ -4,7 +4,8 @@ End-of-year project (2022) for the ElektroClub
 
 ## Minutes of the project
 
-Sorry (double) in Dutch and in [Word](ElektroClub2022-plan.docx) (and [pdf](ElektroClub2022-plan.pdf))
+Sorry (actually double sorry) in Dutch and in [Word](ElektroClub2022-plan.docx), not `md`, 
+but also as [pdf](ElektroClub2022-plan.pdf).
 
 
 ## Checking the CD4060 behavior
@@ -20,10 +21,14 @@ and the time [calculation](timing.xlsx).
 
 The schematics is based on one from [buildcircuit](https://www.buildcircuit.com/diy-kit-8-happy-birthday-led-flashing-diy-kit-using-cd4060-and-music-chip/).
 We have 5 groups of LEDs, not three. And we added some capacitors.
-We were initially puzzled by the diodes, we now believe they form a "wired OR", resetting the CD4060 when all three (five) transistor basis are hi 
-- when the CD4060 reaches 0b...111 (0b...11111). In that situation all LEDs are off. 
 
-In other words at the same moment all LEDs are switched off, the CD4060 is reset and outputs 0b...0000 and all LEDs are on.
+We were initially puzzled by the diodes, we now believe they form a "wired OR", 
+resetting the CD4060 when all three (five) transistor basis are high.
+This is when the CD4060 reaches 0b...111 (0b...11111). 
+In that situation all LEDs are off. 
+
+In other words at the same moment all LEDs are switched off, 
+the CD4060 is reset and outputs 0b...0000 and all LEDs are on.
 
 The final [schematic](schematic.pdf).
 
@@ -46,7 +51,7 @@ I made the design in Visio, because that can save to DXF, the format needed by t
 
 ## PCB
 
-The resulting PCB.
+The resulting PCB as a render, front and back side.
 
 ![PCB](pcb.png)
 
