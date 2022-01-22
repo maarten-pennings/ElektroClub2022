@@ -28,14 +28,28 @@ In other words at the same moment all LEDs are switched off, the CD4060 is reset
 The final [schematic](schematic.pdf).
 
 
-## PCB cutout
+## Stand
 
-The design of the big "2022" digits is made in [Visio](outline.vsdx).
+I wanted the PCB to have small feet.
+I made a [3D model](standmodel) to check the position of the slots.
 
-Converted to [DXF outline](outline.dxf) and [png letters](letters.png) for input in the PCB design tool.
+![slots](standmodel/concept.png)![model](standmodel/feet-slanted.png)
 
-The resulting PCB:
 
-![PCB](pcb.png).
+## Board outline
+
+A step that took quite some time was the design of the [board outline](pcboutline).
+This includes the big "2022" digits, because I wanted to cut them out.
+I made the design in Visio, because that can save to DXF, the format needed by the PCB tool.
+
+![outline](pcboutline/outline.png)
+
+## PCB
+
+The resulting PCB.
+
+![PCB](pcb.png)
+
+![PCB backside](pcb-back.png)
 
 (end)
