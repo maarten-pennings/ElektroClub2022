@@ -57,4 +57,6 @@ The resulting PCB as a render, front and back side.
 
 ![PCB backside](pcb-back.png)
 
+The [gerber](Gerber_ElektroClub2022_pcb.zip) is also available.
+
 (end)
