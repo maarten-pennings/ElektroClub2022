@@ -1,26 +1,36 @@
 # ElektroClub2022
-End-of-year project (2022) for the ElektroClub
+
+End-of-year project (2022) for the ElektroClub.
 
 
-## Minutes of the project
+## Introduction
 
-Sorry (actually double sorry) in Dutch and in [Word](ElektroClub2022-plan.docx), not `md`, 
-but also as [pdf](ElektroClub2022-plan.pdf).
+In my village I'm volunteer for at an "ElectroClub" for children 8 to 12 years.
+At the end of the (school) year we try to have a master piece for them, to remember the club.
+In 2022 we wanted the year digits with flashing numbers; this is actually a copy of an old project:
 
+![front](2014-front.jpg) ![back](2014-back.jpg) ![pcb](2014-pcb.jpg)
 
-## Checking the CD4060 behavior
+What we remembered from 2014 is that creating the wooden panels, soldering all the LED wires, 
+gluing all wires in place was too time consuming.
+This year we will try a variation: designing the PCB using [EasyEDA](https://easyeda.com)
+and manufacturing it via [JLCPCB](https://jlcpcb.com/). 
+The biggest challenge is to get a nice rendering of the big digits 2022.
 
-The internals (first four flipflops are not bound out, and also number 11 is missing...)
-
-![4060 internals](CD4060-internals.png)
-
-and the time [calculation](timing.xlsx).
+We have minutes of the project in [Word](ElektroClub2022-plan.docx) or [pdf](ElektroClub2022-plan.pdf) - sorry they are in Dutch.
 
 
 ## Schematics
 
+The 2014 schematics were lost in time, so we needed some googling.
+The heart of the circuit is the [4060 binary counter](https://www.ti.com/lit/ds/symlink/cd4060b.pdf):
+
+![4060 internals](CD4060-internals.png)
+
 The schematics is based on one from [buildcircuit](https://www.buildcircuit.com/diy-kit-8-happy-birthday-led-flashing-diy-kit-using-cd4060-and-music-chip/).
-We have 5 groups of LEDs, not three. And we added some capacitors.
+However, we have 5 groups of LEDs, not three. And we added some capacitors for stabilization.
+
+We will use the outputs to flash the LEDs; here are some time [calculations](timing.xlsx).
 
 We were initially puzzled by the diodes, we now believe they form a "wired OR", 
 resetting the CD4060 when all three (five) transistor basis are high.
@@ -30,7 +40,7 @@ In that situation all LEDs are off.
 In other words at the same moment all LEDs are switched off, 
 the CD4060 is reset and outputs 0b...0000 and all LEDs are on.
 
-The final [schematic](schematic.pdf).
+Our final [schematic](schematic.pdf).
 
 
 ## Stand
@@ -49,6 +59,7 @@ I made the design in Visio, because that can save to DXF, the format needed by t
 
 ![outline](pcboutline/outline.png)
 
+
 ## PCB
 
 The resulting PCB as a render, front and back side.
@@ -58,5 +69,11 @@ The resulting PCB as a render, front and back side.
 ![PCB backside](pcb-back.png)
 
 The [gerber](Gerber_ElektroClub2022_pcb.zip) is also available.
+
+
+## Order
+
+I ordered 5 red, 10 green and 5 black at jlcpcb; pricing: €1.76, €4.41, €3.53 respectively 
+plus €15.85 shipping. Total €25.55.
 
 (end)
