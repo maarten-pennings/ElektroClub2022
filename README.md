@@ -117,4 +117,9 @@ We might have ordered too few IC sockets or USB connectors.
   |    |                 |                 |                    |         |               | Total cost €58.57 (**€2.93/piece**) |
 
 
+## Instructions
+
+There is an instruction for assembling this PCB: [doc](ElektroClub2022-manual.docx) and [pdf](ElektroClub2022-manual.pdf).
+Since they are for the children, theyt are in Dutch.
+
 (end)
