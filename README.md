@@ -119,7 +119,8 @@ We might have ordered too few IC sockets or USB connectors.
 
 ## Instructions
 
-There is an instruction for assembling this PCB: [doc](ElektroClub2022-manual.docx) and [pdf](ElektroClub2022-manual.pdf).
-Since they are for the children, theyt are in Dutch.
+There is an instruction leaflet for assembling the PCB:
+a [doc](ElektroClub2022-manual.docx) or [pdf](ElektroClub2022-manual.pdf) version.
+Since the leaflet is for the children, it is in Dutch.
 
 (end)
