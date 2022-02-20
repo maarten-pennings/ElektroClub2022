@@ -78,8 +78,8 @@ pricing: €1.76, €4.41, €3.53 respectively plus €15.85 shipping. Total �
 
 The resulting PCBs are great looking. Here is is the black one, front and back.
 
-![PCB front side](pcboutline/view-3.png)
+![PCB front side](pcboutline/view-3.jpg)
 
-![PCB back side](pcboutline/view-3b.png)
+![PCB back side](pcboutline/view-3b.jpg)
 
 (end)
