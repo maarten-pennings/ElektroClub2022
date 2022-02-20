@@ -73,7 +73,13 @@ The [gerber](Gerber_ElektroClub2022_pcb.zip) is also available.
 
 ## Order
 
-I ordered 5 red, 10 green and 5 black at jlcpcb; pricing: €1.76, €4.41, €3.53 respectively 
-plus €15.85 shipping. Total €25.55.
+I ordered 5 red, 10 green and 5 black at [JLCPCB](https://jlcpcb.com/); 
+pricing: €1.76, €4.41, €3.53 respectively plus €15.85 shipping. Total €25.55.
+
+The resulting PCBs are great looking. Here is is the black one, front and back.
+
+![PCB front side](pcboutline/view-3.png)
+
+![PCB back side](pcboutline/view-3b.png)
 
 (end)

@@ -3,6 +3,7 @@
 Non rectangular board outline and fancy silk print
 in [EasyEDA](https://easyeda.com) and [JLCPCB](https://jlcpcb.com/). 
 
+Find the design on [oshwlab](https://oshwlab.com/maartenpennings/elektroclub2022).
 
 ## Introduction
 
