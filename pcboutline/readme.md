@@ -103,15 +103,16 @@ In an image editing programs (MS Paint), I added some white between the digits.
 ![letters before](letters.png) ![letters after](letters-edited.png)
 
 In the [EasyEDA](https://easyeda.com) PCB editor, start by selecting the 
-correct layer for the import - in our case the `Toplayer`. 
+correct layer for the import - in our case the `TopSilklayer`. 
 
-![Silk print - top layer](easyeda-png0.png)
+![Silk print - top silk layer](easyeda-png0.png)
 
 
 Next start the dialog to import the png file. 
 
 ![Silk print - dialog](easyeda-png1.png)
 
+Select `letters-edited.png` as image file.
 Note that EasyEDA doesn't care about black or gray, it imports the png in two-tone (black and white) - this
 is governed by the `Color Tolerance` slider.
 
@@ -122,13 +123,14 @@ The aspect ratio is maintained.
 ![Silk print - size](easyeda-png2.png)
 
 Now drag the image to the correct position.
-If the image is a bit off in size, or on the wrong layer, right click and select Properties.
+If the image is a bit off in size, or on the wrong layer, right click and select `Properties`.
 In the window that pops-up the width, height, layer can be changed.
 Note that here the aspect ratio is _not_ maintained.
+You can not select the units in this windows; our 97.4mm is rendered as 3833mil.
 
 ![Silk print - properties](easyeda-png3.png)
 
-This is also available in the panel on the right (View > Right-Hand Panel)
+This is also available in the panel on the right `View > Right-Hand Panel` - assuming the image is selected (white).
 
 ![Silk print - panel](easyeda-png4.png)
 
