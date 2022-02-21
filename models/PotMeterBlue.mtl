@@ -1,0 +1,8 @@
+# mtl file handcrafted by Maarten
+
+newmtl Plastic_-_Glossy_(Green)
+Kd 0.196078 0.380392 0.760784
+
+newmtl Copper_-_Raw
+Kd 0.749020 0.780392 0.800000
+
