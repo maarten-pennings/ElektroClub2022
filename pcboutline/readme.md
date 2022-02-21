@@ -1,6 +1,6 @@
 # PCB outline
 
-Non rectangular board outline and fancy silk print
+Non-rectangular board outline and fancy silk print
 in [EasyEDA](https://easyeda.com) and [JLCPCB](https://jlcpcb.com/). 
 
 Find the design on [oshwlab](https://oshwlab.com/maartenpennings/elektroclub2022).
@@ -9,8 +9,8 @@ Find the design on [oshwlab](https://oshwlab.com/maartenpennings/elektroclub2022
 
 We want big digits.
 Those digits need to stand out.
-We achieve this via means:
- - partially cut them out "pcb outline"
+We achieve this in two ways:
+ - partially "cut them out", i.e. complex PCB outline
  - "paint" them, either via silk print or via metal
  
 [EasyEDA](https://easyeda.com) has an import mechanism for both.
@@ -26,7 +26,7 @@ I had one tool that support both, VISIO.
 I've drawn the 4 digits in Visio using "Arial Rounded MT Bold" at 150pt.
 At this size, the four digits span 100mm, the target width of the PCB.
 
-I rendered the digits twice, once bold (blue) and once not (black/gray).
+I rendered the digits twice, once bold (blue) and once non-bold (black/gray).
 The black/gray will be exported as png for EasyEDA silk screen.
 
 I used the blue as a reference for a hand crafted outline.
@@ -55,13 +55,13 @@ Also make sure to import on layer `BoardOutLine`.
 ![Outline - outline](easyeda-dxf2.png)
 
 Note that a DXF file has units and length, so the outline has the correct dimensions.
-You might want to use Place > Set canvas Origin > By Mouse Location to set the origin.
-(and use middle mouse button with move to pan and ctrl-middle mouse button with wheel-roll to zoom).
+You might want to use `Place > Set canvas Origin > By Mouse Location` to set the origin
+(and use middle-mouse-button with moving the mouse to **pan** and ctrl-middle-mouse-button with a wheel-roll to **zoom**).
 
 If you click the outline (purple line) with the mouse it will light up white to indicate selection.
 What we do see is that the outline is not one curve but multiple segments 
 (in the image below, we see a selection of a small wedge).
-Even more important, the segments are not fully connected (in the image below red encircled).
+Even more importantly, the segments are not fully connected (in the image below red encircled).
 
 ![Outline - connected](easyeda-dxf3.png)
 
@@ -71,8 +71,8 @@ so that both ends snap to the same grid point.
 ![Outline - same grid point](easyeda-dxf4.png)
 
 For the inner holes we need to go one step further. 
-Not only do the segments need to be _connected_ (overlapping end-points), the need to be continuous.
-So after you manually moved the end-points of the segments to over lap, select all the segments that make up one hole.
+Not only do the segments need to be _connected_ (overlapping end-points), they need to be _continuous_.
+So after you manually moved the end-points of the segments to overlap, select all the segments that make up one hole.
 Either drag a rectangle around all, or use CTRL-click to add (actually toggle) segments to the selection.
 Once all segments are selected right-click on the black canvas (not on a segment!) and select `Combine to Continuous Track`.
 
@@ -86,7 +86,7 @@ Select the track, use the right-click menu and select `Convert to Board Cutout`.
 
 ![Outline - board cutout](easyeda-dxf6.png)
 
-If the polygon is _not_ filled gray, the track was not closed. Drag end points to make sure the overlap;
+If the polygon (cutout) is _not_ filled gray, the track was not closed. Drag end-points to make sure they overlap;
 again I suggest to drag all endpoints to a grid point.
 
 ![Outline - gray](easyeda-dxf7.png)
@@ -98,7 +98,7 @@ The 3D View menu is a good way to check the cutout was successful.
 
 ## Silk print
 
-In an image editing programs, I added some white between the digits.
+In an image editing programs (MS Paint), I added some white between the digits.
 
 ![letters before](letters.png) ![letters after](letters-edited.png)
 
@@ -123,7 +123,7 @@ The aspect ratio is maintained.
 
 Now drag the image to the correct position.
 If the image is a bit off in size, or on the wrong layer, right click and select Properties.
-In the windows that pops-up the width, height, layer can be changed.
+In the window that pops-up the width, height, layer can be changed.
 Note that here the aspect ratio is _not_ maintained.
 
 ![Silk print - properties](easyeda-png3.png)
