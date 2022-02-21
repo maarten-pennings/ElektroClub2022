@@ -103,7 +103,7 @@ In an image editing programs (MS Paint), I added some white between the digits.
 ![letters before](letters.png) ![letters after](letters-edited.png)
 
 In the [EasyEDA](https://easyeda.com) PCB editor, start by selecting the 
-correct layer for the import - in our case the `TopSilklayer`. 
+correct layer for the import - in our case the `TopSilkLayer`. 
 
 ![Silk print - top silk layer](easyeda-png0.png)
 
