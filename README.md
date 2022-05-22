@@ -122,6 +122,7 @@ There is an instruction leaflet for assembling the PCB:
 a [doc](ElektroClub2022-manual.docx) or [pdf](ElektroClub2022-manual.pdf) version.
 Since the leaflet is for the children, it is in Dutch.
 
+
 ## Final result
 
 The assembled board looks like this (sorry, potmeter is on backorder).
@@ -129,5 +130,11 @@ The assembled board looks like this (sorry, potmeter is on backorder).
 ![Ready no pot](ready-nopot.jpg)
 
 For a video check [YouTube](https://www.youtube.com/watch?v=dqfvwsGTvYA).
+
+
+## Problems
+
+The result (see video) looks ok, but we found some [issues](debug).
+
 
 (end)
