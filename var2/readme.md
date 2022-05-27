@@ -30,7 +30,20 @@ See the [schematics](Schematic_ElektroClub2022tiny.pdf).
 
 The ATtiny85 with firmware, group drivers and switches is tested on a breadboard.
 Here is demo [video](https://www.youtube.com/watch?v=RSclDXem_cg).
+Speed varies over 100ms, 200ms, 400ms, 800ms, 1600ms, 3200ms, and 6400ms.
+Patterns are ALL, HALF024, HALF34, BIN, WALK1, WALK2, WALK3, RND, RNDHI.
 
+
+## In-situ
+
+Next step was to test the ATtiny in the actual PCB. I took out the 4060
+and wired the 4060 pins to a breadboard with the ATtiny85 (and the two switches).
+
+The lower switch controls pattern mode: 
+flash ALL, HALF (0+1+2 then 3+4), BINARY, WALK1, WALK2, FILL, RND, RNDMED (min 2 leds on, max 3). 
+The upper switch controls the blink time 100, 200, 400, 800, 1600, 3200, and 6400ms. 
+
+This is the [video](https://youtu.be/QG9YBovyWns).
 
 (end)
 

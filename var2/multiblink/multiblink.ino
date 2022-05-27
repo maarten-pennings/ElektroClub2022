@@ -56,7 +56,7 @@ void led_set(uint8_t leds ) {
 #define BUT_ALL     3
 
 
-#define BUT_0_PIN   LED_0_PIN
+#define BUT_0_PIN   LED_3_PIN
 #define BUT_1_PIN   LED_4_PIN
 
 
@@ -102,25 +102,24 @@ uint8_t but_wentdown(uint8_t buts) {
 
 #define MODE_ALL       0
 #define MODE_HALF      1
-#define MODE_HALF2     2
-#define MODE_BIN       3
-#define MODE_WALK      4
-#define MODE_WALK2     5
-#define MODE_WALK3     6
-#define MODE_RND       7
-#define MODE_RNDHI     8
-#define MODE_COUNT     9
+#define MODE_BIN       2
+#define MODE_WALK1     3
+#define MODE_WALK2     4
+#define MODE_FILL      5
+#define MODE_RND       6
+#define MODE_RNDMED    7
+#define MODE_COUNT     8
 
 
 // Which animation mode, wich substate, and how long for one animation step
-uint8_t mode = MODE_RNDHI;
+uint8_t mode = MODE_RNDMED;
 uint8_t state = 0;
 uint8_t wait100ms = 8;
 
 
 #if 0 // 1 for Serial support
   #warning Compiled with serial support
-  const char * mode_names[MODE_COUNT]={"all","half","half2","bin","walk","walk2","walk3","rnd","rndhi"};
+  const char * mode_names[MODE_COUNT]={"all","half","bin","walk1","walk2","fill","rnd","rndmed"};
   void print_mode() {
     Serial.print("mode="); Serial.print(mode); Serial.print("="); Serial.print(mode_names[mode]);
     Serial.print("  wait100ms="); Serial.println(wait100ms);
@@ -182,13 +181,6 @@ void loop() {
       
     case MODE_HALF:
       state = (state+1)%2;
-      mask = LED_1+LED_3;
-      rev = state;
-      led_set( rev ? ~mask : mask );
-      break;
-      
-    case MODE_HALF2:
-      state = (state+1)%2;
       mask = LED_3+LED_4;
       rev = state;
       led_set( rev ? ~mask : mask );
@@ -200,7 +192,7 @@ void loop() {
       led_set( mask );
       break;
     
-    case MODE_WALK:
+    case MODE_WALK1:
       state = (state+1)%5;
       mask = 1<<state;
       led_set( mask );
@@ -213,12 +205,12 @@ void loop() {
       led_set( mask );
       break;
     
-    case MODE_WALK3:
-      state = (state+1)%5;
-      mask = 1<<state;
-      mask |= 1<<((state+1)%5);
-      mask |= 1<<((state+2)%5);
-      led_set( mask );
+    case MODE_FILL:
+      state = (state+1)%10;
+      mask = state % 5;
+      rev = state / 5;
+      mask = (1<<mask) - 1;
+      led_set( rev ? 31-mask : mask);
       break;
     
     case MODE_RND:
@@ -228,9 +220,9 @@ void loop() {
       led_set( mask );
       break;
   
-    case MODE_RNDHI:
-      state = random(0,32);
-      while( popcount[state]<2 || state==mask ) state = (state+1)%32;
+    case MODE_RNDMED:
+      state = random(0,32); 
+      while( popcount[state]<2 || popcount[state]>3 || state==mask ) state = (state+1)%32;
       mask = state;
       led_set( mask );
       break;
