@@ -45,5 +45,11 @@ The upper switch controls the blink time 100, 200, 400, 800, 1600, 3200, and 640
 
 This is the [video](https://youtu.be/QG9YBovyWns).
 
+## Impression
+
+A possible impression for the new PCB
+
+![Impression](impression.png)
+
 (end)
 
